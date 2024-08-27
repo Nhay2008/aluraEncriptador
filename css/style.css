@@ -1,0 +1,251 @@
+/* Ajustes Generales */
+* {
+  box-sizing: border-box; /* Incluye padding y borde dentro del ancho y alto */
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  color: #f3f5fc;
+  height: 100%; 
+  overflow-x: hidden; /* Evita el desbordamiento horizontal */
+}
+
+body {
+  background-image: url('../img/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header-content { 
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos */
+  gap: 10px; /* Espacio entre el SVG y el h1 */
+  margin-top: 2%;
+  
+  margin-right: auto;
+}
+
+.header-content svg {
+  
+  stroke: #f7f4f4; /* Color del borde */
+  stroke-width: 2; /* Grosor del borde */
+  width: 120px;
+  height: 48px;
+}
+
+.header-content h1 {
+  margin: 0;
+  font-size: 35px; /* Ajusta el tamaño del texto */
+  line-height: 48px; /* Alinea verticalmente con el SVG */
+}
+
+.container {
+  width: 100%; /* Ajustado a 100% */
+  padding: 20px;
+  flex: 1;
+}
+
+.input-output-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px; /* Reducido para evitar desbordamiento */
+}
+
+.instruction {
+  padding: 25px;
+  margin-top: 3%; /* Espacio entre el textarea y el texto */
+  color: #f3f5fc; /* Cambia el color si es necesario */
+  font-size: 1rem; /* Ajusta el tamaño del texto */
+}
+
+.error-message {
+  padding: 25px;
+  color: #eedcdc; /* Color rojo para el mensaje de error */
+  margin-top: 10px; /* Espacio entre el textarea y el mensaje */
+  font-size: 1rem; /* Tamaño del texto */
+  display: none; /* Oculto por defecto */
+}
+
+.input-section, .output-section {
+  flex: 1; /* Permite que ambos compartan el espacio disponible */
+  margin-top: auto;
+}
+
+textarea#inputText {
+  width: 100%;
+  height: 300px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  padding: 25px;
+  font-size: 1.2rem;
+  background: #c1ccf1;
+  color: #39659b;
+  resize: vertical;
+}
+
+.output-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 15px;
+  background: #c1ccf1;
+  color: #0A3871;
+  width: 100%;
+  overflow-y:scroll;
+  height: 500px;
+}
+
+.message-box {
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.message-title {
+  font-weight: bold;
+}
+
+/* Botones */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Permite que los botones se ajusten en varias líneas si es necesario */
+}
+
+.copy-message {
+  color: #b0e0bb; /* Color verde para el mensaje de copia */
+  margin-top: 10px; /* Espacio entre los botones y el mensaje */
+  font-size: 1.5rem; /* Tamaño del texto */
+  display: none; /* Oculto por defecto */
+}
+
+.input-section .buttons {
+  margin-top: 20px;
+}
+
+.output-section .buttons {
+  margin-top: 20px;
+}
+
+.buttons button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  max-width: 200px; /* Tamaño estándar máximo */
+  flex: 1; /* Hace que los botones se adapten al ancho disponible */
+}
+
+/* Animación de botones */
+button {
+  transition: background-color 0.3s ease, transform 0.1s ease; /* Efecto de transición suave */
+}
+
+/* Efecto de hover */
+button:hover {
+  background-color: #f2ede4; /* Cambia a un color crema suave al pasar el ratón */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón */
+}
+
+/* Efecto de clic */
+button:active {
+  transform: scale(0.95); /* Reduce el tamaño del botón al hacer clic */
+}
+
+
+#encryptBtn { background-color: #9ce5eb; }
+#decryptBtn { background-color: #d8a29f; }
+#copyBtn { background-color: #d0dfe4; }
+
+.footer {
+  background-color: rgb(0, 0, 0);
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  margin-top: auto; /* Empuja el footer al final de la página */
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row; /* Mantiene los íconos y el texto en una línea */
+  align-items: center; /* Alinea verticalmente los elementos */
+  justify-content: center; /* Centra el contenido */
+}
+
+.footer-container h4 {
+  margin-right: 20px; /* Añade espacio a la derecha del texto */
+}
+
+.footer-link ul {
+  display: flex;
+  gap: 15px;
+  margin: 0; /* Eliminar margen para alineación adecuada */
+  padding: 0; /* Eliminar padding */
+  list-style: none; /* Eliminar los puntos de la lista */
+}
+
+.footer-link ul li {
+  display: inline; /* Mantiene los elementos en línea */
+}
+
+.footer-link ul li a {
+  font-size: 30px; /* Aumenta el tamaño de los íconos */
+  color: #b0e0bb; /* Cambia el color de los íconos aquí */
+  transition: color 0.3s; /* Transición suave para el cambio de color */
+}
+
+.footer-link ul li a:hover {
+  color: #f3f5fc; /* Cambia el color del ícono al pasar el mouse */
+}
+
+--------------------------------
+.hidden {
+  opacity: 0; /* Hace que el elemento sea completamente transparente */
+  transition: opacity 0.5s ease; /* Transición suave de opacidad */
+}
+
+.visible {
+  opacity: 1; /* Hace que el elemento sea completamente visible */
+  transition: opacity 0.5s ease; /* Transición suave de opacidad */
+}
+
+.status-message {
+  font-weight: bold;
+  color: #615216; /* Color para el mensaje de estado */
+  margin-bottom: 10px; /* Espacio debajo del mensaje */
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .input-output-wrapper {
+    flex-direction: column;
+    gap: 20px; /* Ajusta el gap para pantallas pequeñas */
+  }
+
+  .output-section #outputText {
+    width: 100%; /* Asegúrate de que ocupe todo el ancho */
+    height: 500px;
+    margin-top: 20px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px; /* Espacio reducido entre los botones en pantallas pequeñas */
+  }
+
+  .buttons button {
+    max-width: 100%; /* Asegura que los botones ocupen todo el ancho disponible en pantallas pequeñas */
+  }
+}
