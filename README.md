@@ -1,5 +1,3 @@
-Proyecto de AluraLatam Encriptador de Texto
-
 # Encriptador de Texto
 
 ## Descripción del Proyecto
